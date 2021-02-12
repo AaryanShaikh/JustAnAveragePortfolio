@@ -683,10 +683,9 @@
 	<script src="gsap.min.js"></script>
 	<script src="hover.js"></script>
 	<script>
-		var detector = new MobileDetect(window.navigator.userAgent)
-		if(detector.mobile()!=null&&detector.phone()!=null&&detector.tablet()!=null&&detector.os()!=null
-			&&detector.userAgent()!=null){
-		swal({
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		if (isMobile) {
+  			swal({
 			title: "Oops!!",
 			text: "You see this is a Desktop Application, so it would be better if you open me on your PC!!",
 			icon: "warning",
