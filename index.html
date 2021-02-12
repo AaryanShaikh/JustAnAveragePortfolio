@@ -684,11 +684,7 @@
 	<script>
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) {
-  			swal({
-			title: "Oops!!",
-			text: "You see this is a Desktop Application, so it would be better if you open me on your PC!!",
-			icon: "warning",
-		});
+			alert("Oops!! You see this is a Desktop Application, so it would be better if you open me on your PC!!");
 			window.close('','_parent','');
 		}
 /* Loader */
