@@ -684,8 +684,18 @@
 	<script>
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) {
-			alert("Oops!! You see this is a Desktop Application, so it would be better if you open me on your PC!!");
-			window.close('','_parent','');
+			swal({
+				title: "Opps!!",
+				text: "You see this is a Desktop Application, so it would be better if you open me on your PC!!",
+				icon: "warning",
+				buttons: {
+					confirm: "Okay! Got it!"
+				}
+			}).then( val => {
+					if(val){
+						window.close('','_parent','');
+					}
+				});			
 		}
 /* Loader */
  let tl = anime.timeline({
@@ -713,7 +723,8 @@
 			$("#faba").fadeIn("slow");
 			$(".loader-wrapper").fadeOut("slow");
 // tutorial
- introJs().setOptions({
+if (!isMobile) {
+	introJs().setOptions({
  	steps:[
  		{position:"right",
  		 intro:"Hey There! Welcome to my portfolio 😎. Well there are many things going on here so I'll give you a quick walkthrough! let's continue!",
@@ -748,7 +759,8 @@
 		icon: "success",
 	});
 })
- .start();
+ .start();	
+}
  /* background */
  particlesJS.load('himg','particle-cfg.json');
  introJs.fn.oncomplete(function() {
