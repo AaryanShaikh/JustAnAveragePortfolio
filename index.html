@@ -696,7 +696,19 @@
 						window.close('','_parent','');
 					}
 				});			
+		}else{
+			 /* Total visisted */
+ const totalVisited = document.getElementById("visited");
+ updateVisited();
+ function updateVisited(){
+ 	fetch('https://api.countapi.xyz/update/aaryan-shaikh/portfolio/?amount=1')
+ 	.then(res => res.json())
+ 	.then(res => {
+ 		totalVisited.innerHTML = res.value;
+ 	});
+ }	
 		}
+			
 /* Loader */
  let tl = anime.timeline({
  	duration: 750,
@@ -777,17 +789,7 @@ if (!isMobile) {
                 time: 3000
             });
         });
-		});
- /* Total visisted */
- const totalVisited = document.getElementById("visited");
- updateVisited();
- function updateVisited(){
- 	fetch('https://api.countapi.xyz/update/aaryan-shaikh/portfolio/?amount=1')
- 	.then(res => res.json())
- 	.then(res => {
- 		totalVisited.innerHTML = res.value;
- 	});
- }				
+		});				
 		/*3d*/
 		Array.from(document.querySelectorAll('.imgbxth')).forEach((e) => {
 			const imgs = Array.from(e.querySelectorAll('img'));
