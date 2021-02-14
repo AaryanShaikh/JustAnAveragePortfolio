@@ -682,6 +682,8 @@
 	<script src="gsap.min.js"></script>
 	<script src="hover.js"></script>
 	<script>
+	 /* Total visisted */
+ const totalVisited = document.getElementById("visited");
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) {
 			swal({
@@ -697,17 +699,15 @@
 					}
 				});			
 		}else{
-			 /* Total visisted */
- const totalVisited = document.getElementById("visited");
- updateVisited();
+			 updateVisited();
+		}
  function updateVisited(){
  	fetch('https://api.countapi.xyz/update/aaryan-shaikh/portfolio/?amount=1')
  	.then(res => res.json())
  	.then(res => {
  		totalVisited.innerHTML = res.value;
  	});
- }	
-		}
+ }		
 			
 /* Loader */
  let tl = anime.timeline({
