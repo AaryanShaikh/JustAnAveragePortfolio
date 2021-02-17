@@ -756,7 +756,7 @@ if (!isMobile) {
  		{position:"center",
  		 intro:"And finally if you're like me who doesn't like scrolling 😥, there's a black button on your right which will scroll you back all the way to the top!!"},
  		{position:"right",
- 		 intro:"Also that navigation bar is not for show 😂, you can use it to navigate through my website!! Well That's about it for me! Have Fun! ✌️",
+ 		 intro:"Also that navigation bar is not for show 😂, you can use it to navigate through my website!! Well That's about it for me! Don't forget to press CTRL+K to find all the cheats you can use in my website!!! Have Fun! ✌️",
  		 element: document.querySelector('#myimg')}     
  	],
  	showProgress: true,
@@ -780,6 +780,34 @@ if (!isMobile) {
 		title: "My website have been visited "+totalVisited.innerHTML+" times!!",
 		icon: "success",
 	});
+ });
+
+/* Cheats */
+Mousetrap.bind(['ctrl+k'], function(e) {
+    swal({
+		title: "Cheats!!",
+		text: "1. goodbye -> closes the website\n2. iliketocode -> opens up my Github!\n3. followmeup -> opens up my Instagram",
+		icon: "warning"
+	});
+    return false;
+});
+Mousetrap.bind('g o o d b y e', function() { 
+	swal({
+		title: "Thank you for visiting my website!!",
+		buttons: {
+			confirm: "Yeah! Sure!"
+		}
+	}).then( val => {
+		if(val){
+			window.close('','_parent','');
+		}
+	});
+ });
+Mousetrap.bind('i l i k e t o c o d e', function() { 
+	window.open("https://github.com/AaryanShaikh/");
+ });
+Mousetrap.bind('f o l l o w m e u p', function() { 
+	window.open("https://www.instagram.com/its.me.cypher/");
  });
 
  /*counter*/
