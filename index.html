@@ -839,6 +839,11 @@ Mousetrap.bind('f o l l o w m e u p', function() {
                 time: 3000
             });
         });
+			
+lax.init()
+    lax.addDriver('scrollY', function () {
+      return window.scrollY
+    });			
 		});				
 		/*3d*/
 		Array.from(document.querySelectorAll('.imgbxth')).forEach((e) => {
