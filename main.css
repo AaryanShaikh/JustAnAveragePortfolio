@@ -172,6 +172,14 @@ body{
 	padding: 100px;
 	width: 50%;
 }
+.abani{
+	position: absolute;
+	top: 40%;
+	height: 50%;
+	width: 50%;
+	background: transparent;
+	border: 20px solid rgba(255, 255, 255, .3);
+}
 #testh{
 	position: relative;
 	top: 60px;
