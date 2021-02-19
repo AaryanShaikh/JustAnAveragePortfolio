@@ -106,9 +106,25 @@ body{
 	font-family: Ace Records;
 }
 /* navigation */
+.rlogo{
+	position: fixed;
+	left: 5px;
+	top: 9px;
+	height: 14%;
+	width: 6.7%;
+	background: url('logo.png');
+	background-size: cover;
+	transition: .5s;
+}
+.banner header.sticky .rlogo{
+	left: 35px;
+	top: 0px;
+	height: 7.5%;
+	width: 4.4%;
+}
 .banner header.sticky{
 	padding: 5px 100px;
-	background: #fff;
+	background: rgba(0, 0, 0, .8);
 	text-shadow: 1px 1px 2px #000000;
 }
 .banner header.sticky ul li a,
