@@ -129,7 +129,7 @@ body{
 }
 .banner header.sticky ul li a,
 .banner header.sticky a{
-	color: #000;
+	color: #fff;
 } 
 .banner header{
 	position: fixed;
