@@ -272,7 +272,7 @@
 	<section class="about" id="about">
 		<div class="contentBx">
 			<div class="abani lax lax_preset_spin:2750:360"></div>
-			<h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:400px;">About Me!</h2>
+			<h2 class="heading" id="abme" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:400px;">About Me!</h2>
 			<h2 class="ahead" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:400px;">Web Developer</h2>
 			<p class="text lax lax_preset_fadeInOut" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">I am <b>Aaryan Shaikh</b>. I am a simple , creative, enthusiastic and fun-loving person. I always like to create something unique and try to be helpful for others. <br><br>I have experience in HTML5, CSS3, Javascript, JQuery, Node js, Java, Software like Photoshop and so on. <br><br><span id="iden"><b>Name:</b> Aaryan Shaikh</span> <span id="iden2"><b>Phone:</b> +91 7447525784</span><br><span id="iden"><b>Age:</b> 20</span> <span id="iden2"><b>Address:</b> Cozy Apartment</span><br><span id="iden"><b>Hobbies:</b> Editing, Gaming</span></p>
 		</div>
@@ -285,7 +285,7 @@
 	</section>
 	<!-- services -->
 	<section class="services" id="services">
-		<h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">My Services</h2>
+		<h2 class="heading" id="myser" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">My Services</h2>
 		<p class="text" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:1;right:500px;">This are the 3 things I'm good at and can offer my expertise. The Applications I use are mention below the Services.</p>
 		<div class="container">
 			<div class="serviceBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
@@ -589,7 +589,7 @@
 		<ul class="tul">
 				<li>
 					<div class="tcontent">
-						<p>I've a habit of dumping everything I code on <b>Github</b>. You can access my <b>Github</b> <i>from Codes</i> section available in the navigation!!</p>
+						<p>I've a habit of dumping everything I code on <b>Github</b>. You can access my <b>Github</b> from <i>Codes</i> section available in the navigation or using the cheat code 'iliketocode'(no quotes)!!</p>
 					</div>
 				</li>
 			</ul>
@@ -619,7 +619,7 @@
 		<div class="container">
 			<div class="contactinfo">
 				<div>
-					<h2 data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">Contact Info</h2>
+					<h2 data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;" id="conin">Contact Info</h2>
 						<ul class="info" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
 							<li><span><img src="location.png" alt=""></span>
 								<span>Cozy apartments, 2nd Floor, 'A' Wing <br>
@@ -1037,7 +1037,7 @@ const test = new Letterize({
       targets: test.listAll,
       delay: anime.stagger(100, {
           grid: [test.list[0].length, test.list.length],
-          from: "center"
+          from: "first"
         }),
       loop: true,
       easing: 'easeInOutQuad',
@@ -1046,17 +1046,98 @@ const test = new Letterize({
 
     animation
       .add({
-        scale: 1,
-        padding: 0
+        rotate: 0,
+        scale: 1
       })
       .add({
-      	scale: 0.5
+        rotate: 360,
+        scale: 0.5
+      });
+</script>
+<script type="module">
+import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
+const test = new Letterize({
+      targets: "#abme"
+    });
+
+    var animation = anime.timeline({
+      targets: test.listAll,
+      delay: anime.stagger(100, {
+          grid: [test.list[0].length, test.list.length],
+          from: "first"
+        }),
+      loop: true,
+      duration:3000
+    });
+
+    animation
+      .add({
+        rotateX: 0,
+        rotateY: 0,
+        rotateZ: 0
       })
       .add({
-      	padding: 5
+        rotateX: 180,
+        rotateY: 180,
+        rotateZ: 180
       })
       .add({
-      	scale: 0
+        rotateX: 360,
+        rotateY: 360,
+        rotateZ: 360
+      });
+</script>
+<script type="module">
+import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
+const test = new Letterize({
+      targets: "#myser"
+    });
+
+    var animation = anime.timeline({
+      targets: test.listAll,
+      delay: anime.stagger(100, {
+          grid: [test.list[0].length, test.list.length],
+          from: "first"
+        }),
+      loop: true,
+      duration:3000,
+      direction: 'alternate'
+    });
+
+    animation
+      .add({
+        rotateX: 0
+      })
+      .add({
+        rotateX: 180
+      })
+      .add({
+        rotateX: 360
+      });
+</script>
+<script type="module">
+import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
+const test = new Letterize({
+      targets: "#conin"
+    });
+
+    var animation = anime.timeline({
+      targets: test.listAll,
+      delay: anime.stagger(100, {
+          grid: [test.list[0].length, test.list.length],
+          from: "center"
+        }),
+      loop: true,
+      duration: 2000,
+      direction: 'alternate'
+    });
+
+    animation
+      .add({
+        rotateY: 0
+      })
+      .add({
+        rotateY: 360
       });
 </script>
 <script type="module">
