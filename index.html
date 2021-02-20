@@ -243,7 +243,7 @@
 			</div>
 		</div>
 		 	<div id="himg"></div>
-		<div class="content" data-0-top="opacity:1;left:100px;" data-200-top="opacity:1;left:0px;">
+		<div class="content" data-0-top="opacity:1;left:200px;" data-200-top="opacity:1;left:0px;">
 			<img src="social.png" id="myimg" class="lax lax_preset_blurInOut lax_preset_fadeInOut">
 			<h2 id="typing"><span id="animate"></span></h2>
 		</div>
@@ -274,7 +274,7 @@
 			<div class="abani lax lax_preset_spin:2750:360"></div>
 			<h2 class="heading" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:400px;">About Me!</h2>
 			<h2 class="ahead" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:400px;">Web Developer</h2>
-			<p class="text" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">I am <b>Aaryan Shaikh</b>. I am a simple , creative, enthusiastic and fun-loving person. I always like to create something unique and try to be helpful for others. <br><br>I have experience in HTML5, CSS3, Javascript, JQuery, Node js, Java, Software like Photoshop and so on. <br><br><span id="iden"><b>Name:</b> Aaryan Shaikh</span> <span id="iden2"><b>Phone:</b> +91 7447525784</span><br><span id="iden"><b>Age:</b> 20</span> <span id="iden2"><b>Address:</b> Cozy Apartment</span><br><span id="iden"><b>Hobbies:</b> Editing, Gaming</span></p>
+			<p class="text lax lax_preset_fadeInOut" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">I am <b>Aaryan Shaikh</b>. I am a simple , creative, enthusiastic and fun-loving person. I always like to create something unique and try to be helpful for others. <br><br>I have experience in HTML5, CSS3, Javascript, JQuery, Node js, Java, Software like Photoshop and so on. <br><br><span id="iden"><b>Name:</b> Aaryan Shaikh</span> <span id="iden2"><b>Phone:</b> +91 7447525784</span><br><span id="iden"><b>Age:</b> 20</span> <span id="iden2"><b>Address:</b> Cozy Apartment</span><br><span id="iden"><b>Hobbies:</b> Editing, Gaming</span></p>
 		</div>
 		<div class="acontainer"  data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:100px;">
 			<div class="imgbxth">
@@ -686,8 +686,15 @@
 	<script src="gsap.min.js"></script>
 	<script src="hover.js"></script>
 	<script>
-	 /* Total visisted */
+		/* Total visisted */
  const totalVisited = document.getElementById("visited");
+ function updateVisited(){
+ 	fetch('https://api.countapi.xyz/update/aaryan-shaikh/portfolio/?amount=1')
+ 	.then(res => res.json())
+ 	.then(res => {
+ 		totalVisited.innerHTML = res.value;
+ 	});
+ }
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) {
 			swal({
@@ -703,16 +710,8 @@
 					}
 				});			
 		}else{
-			 updateVisited();
+			updateVisited();
 		}
- function updateVisited(){
- 	fetch('https://api.countapi.xyz/update/aaryan-shaikh/portfolio/?amount=1')
- 	.then(res => res.json())
- 	.then(res => {
- 		totalVisited.innerHTML = res.value;
- 	});
- }		
-			
 /* Loader */
  let tl = anime.timeline({
  	duration: 750,
@@ -771,7 +770,7 @@ if (!isMobile) {
  	nextToDone: true
  }).onexit(function() {
   	swal({
-		title: "My website have been visited "+totalVisited.innerHTML+" times!!",
+		title: "You're one of the "+totalVisited.innerHTML+" people who have visited my website!!",
 		icon: "success",
 	});
 })
@@ -781,12 +780,25 @@ if (!isMobile) {
  particlesJS.load('himg','particle-cfg.json');
  introJs.fn.oncomplete(function() {
  	swal({
-		title: "My website have been visited "+totalVisited.innerHTML+" times!!",
+		title: "You're one of the "+totalVisited.innerHTML+" people who have visited my website!!",
 		icon: "success",
 	});
  });
-			
-/* No Copy */
+
+ /*counter*/
+ jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 3000
+            });
+        });
+
+ lax.init()
+    lax.addDriver('scrollY', function () {
+      return window.scrollY
+    });
+		});
+ /* No Copy */
  function rclick(){
  	swal({
 		title: "Oye Oye Oye!! No right-clicking and downloading stuff😂😂😂!!",
@@ -805,8 +817,7 @@ if (!isMobile) {
 	});
     return false;
 });
-			
-/* Cheats */
+ /* Cheats */
 Mousetrap.bind(['ctrl+k'], function(e) {
     swal({
 		title: "Cheats!!",
@@ -834,19 +845,6 @@ Mousetrap.bind('f o l l o w m e u p', function() {
 	window.open("https://www.instagram.com/its.me.cypher/");
  });
 
- /*counter*/
- jQuery(document).ready(function($) {
-            $('.counter').counterUp({
-                delay: 10,
-                time: 3000
-            });
-        });
-			
-lax.init()
-    lax.addDriver('scrollY', function () {
-      return window.scrollY
-    });			
-		});				
 		/*3d*/
 		Array.from(document.querySelectorAll('.imgbxth')).forEach((e) => {
 			const imgs = Array.from(e.querySelectorAll('img'));
@@ -950,7 +948,7 @@ function scrollDown() {
 							    Subject : "This is the subject",
 							    Body : "Name: "+first+" "+last+"\nMessage:"+msg
 							}).then(
-							    message => alert(message)
+							  
 							);
 							}else{
 								swal({
@@ -990,6 +988,7 @@ window.onscroll = function(){
   var prog = (window.pageYOffset / totalht) * 100;
   progbar.style.height = prog + "%";
 }
+
 	</script>
 	<!-- modules -->
 	<script type="module">
