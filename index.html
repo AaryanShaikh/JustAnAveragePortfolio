@@ -338,7 +338,7 @@
 	<!-- technology -->
 	<section class="technology" id="technology">
 		<div class="contentBx" data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:-400px;">
-			<h2 class="heading">I use this Cutting-Edge Technologies...</h2>
+			<h2 class="heading" id="sercon">I use this Cutting-Edge Technologies...</h2>
 			<p class="text">I have experience in HTML5, CSS3, Javascript and jQuery which I use for my Front-End Development. I use Php and MySql for Back-End Data Prosessing and Data Storing. I use Photoshop for Image Editing, logos, Brochures and so on. Filmora for Video Editing and Audacity for Audio Editing.</p>
 		</div>
 		<div class="imgBx" data-center-center="opacity:1;right:0;" data-0-bottom="opacity:0;right:-400px;">
@@ -1113,6 +1113,32 @@ const test = new Letterize({
       })
       .add({
         rotateX: 360
+      });
+</script>
+<script type="module">
+import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
+const test = new Letterize({
+      targets: "#sercon"
+    });
+
+    var animation = anime.timeline({
+      targets: test.listAll,
+      scale: [
+    		{value: .1, easing: 'easeOutSine', duration: 500},
+    		{value: 1, easing: 'easeInOutQuad', duration: 1200}
+  		],
+      delay: anime.stagger(100, {
+          grid: [test.list[0].length, test.list.length],
+          from: "first"
+        }),
+      loop: true,
+      duration: 2000,
+      direction: 'alternate'
+    });
+
+    animation
+      .add({
+        rotateX: 0
       });
 </script>
 <script type="module">
