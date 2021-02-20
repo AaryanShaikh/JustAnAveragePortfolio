@@ -187,6 +187,7 @@ body{
 	background: #162c3b;
 	padding: 100px;
 	width: 50%;
+	overflow: hidden;
 }
 .abani{
 	position: absolute;
@@ -1179,19 +1180,19 @@ body{
 	color: #fff;
 }
 .card:nth-child(1) .sksvg circle:nth-child(2){
-	stroke-dashoffset: calc(440 - (440 * 95) / 100);
+	stroke-dashoffset: calc(440 - (440 * 85) / 100);
 	stroke: #ED213A;  
 }
 .card:nth-child(2) .sksvg circle:nth-child(2){
-	stroke-dashoffset: calc(440 - (440 * 90) / 100);
+	stroke-dashoffset: calc(440 - (440 * 80) / 100);
 	stroke: #00a1ff;
 }
 .card:nth-child(3) .sksvg circle:nth-child(2){
-	stroke-dashoffset: calc(440 - (440 * 85) / 100);
+	stroke-dashoffset: calc(440 - (440 * 75) / 100);
 	stroke: #ff04f7;
 }
 .card:nth-child(4) .sksvg circle:nth-child(2){
-	stroke-dashoffset: calc(440 - (440 * 80) / 100);
+	stroke-dashoffset: calc(440 - (440 * 70) / 100);
 	stroke: #00ff43;
 }
 /* overview */
