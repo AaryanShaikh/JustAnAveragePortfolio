@@ -330,6 +330,8 @@ body{
 	transition: 0.5s;
 	text-align: center;
 	background: #fff;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
 }
 .tcontainer .box:hover{
 	background: #ff0057;
@@ -338,6 +340,7 @@ body{
 	margin: 0;
 	padding: 0;
 	transition: 0.5s;
+	transform: translateZ(50px);
 }
 .tcontainer .box h4{
 	margin: 20px 0 0;
@@ -348,6 +351,7 @@ body{
 	line-height: 20px;
 	text-transform: uppercase;
 	color: #ff0057;
+	transform: translateZ(50px);
 }
 .tcontainer .box h4 span{
 	font-weight: 600;
@@ -369,6 +373,7 @@ body{
 	transform: translateX(-50%);
 	border-radius: 50%;
 	overflow: hidden;
+	transform: translateZ(50px);
 }
 .tcontainer .box:before{
 	content: '';
@@ -581,9 +586,11 @@ body{
 	}
 	.banner .content h2{
 		font-size: 36px;
+		transform: translateZ(30px);
 	}
 	.banner .content p{
 		font-size: 16px;
+		transform: translateZ(30px);
 	}
 	.about{
 		flex-direction: column;
