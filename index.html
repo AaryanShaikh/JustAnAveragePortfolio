@@ -11,6 +11,10 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<link rel="manifest" href="site.webmanifest">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
 </head>
 <body oncontextmenu="return rclick()">
 	<!-- heading -->
@@ -816,7 +820,7 @@ if (!isMobile) {
 Mousetrap.bind(['ctrl+k'], function(e) {
     swal({
 		title: "Cheats!!",
-		text: "1. goodbye -> closes the website\n2. iliketocode -> opens up my Github!\n3. followmeup -> opens up my Instagram",
+		text: "1. goodbye -> closes the website\n2. iliketocode -> opens up my Github!\n3. followmeup -> opens up my Instagram\n4. popthehood -> List of all the libraries I've used in this website!",
 		icon: "warning"
 	});
     return false;
@@ -839,7 +843,14 @@ Mousetrap.bind('i l i k e t o c o d e', function() {
 Mousetrap.bind('f o l l o w m e u p', function() { 
 	window.open("https://www.instagram.com/its.me.cypher/");
  });
-
+Mousetrap.bind('p o p t h e h o o d', function() { 
+	swal({
+		title: "Libraries!!",
+		text: "1. tiltJS -> A smooth 3D tilt javascript library.\n2. laxJS -> Simple & lightweight vanilla JavaScript library to create smooth & beautiful animations when you scroll.\n3. mousetrapJS -> Simple library for handling keyboard shortcuts in Javascript.\n4. SMTPJS -> Send email from Javascript.\n5. particlesJS -> A lightweight JavaScript library for creating particles.\n6. sweetalertJS -> A beautiful, responsive, customizable, accessable replacement for javascript's popup boxes.\n7. animeJS -> JavaScript animation engine.\n8. introJS -> Intro.js is a lightweight library for creating step-by-step customer onboarding.\n9. JQuery -> a fast, small, and feature-rich JavaScript library.\n10. skrollrJS -> Stand-alone parallax scrolling library for mobile (Android + iOS) and desktop.\n11. typedJS -> A JavaScript Typing Animation Library.\n12. threeJS -> a cross-browser JavaScript library and application programming interface used to create and display animated 3D computer graphics in a web browser using WebGL.\n13. gsapJS -> Freakishly robust. HTML5 javascript animation built for professionals.\n14. hoverEffectJS -> Javascript library to draw and animate images on hover.",
+		icon: "warning"
+	});
+    return false;
+ });
 		/*3d*/
 		Array.from(document.querySelectorAll('.imgbxth')).forEach((e) => {
 			const imgs = Array.from(e.querySelectorAll('img'));
