@@ -5,24 +5,12 @@ span {
 html{
 	scroll-behavior: smooth;
 }
-@font-face {
-  font-family: Poppins;
-  src: url(Poppins.ttf);
-}
-@font-face {
-	font-family: Ace Records;
-  	src: url(Ace Records.ttf);
-}
-@font-face {
-	font-family: Sweetly Broken;
-  	src: url(Sweetly Broken.ttf);
-}
 *{
 	margin: 0;
 	padding: 0;
 	position: relative;
 	box-sizing: border-box;
-	font-family: Poppins;
+	font-family: 'Poppins', sans-serif;
 	cursor: url('cursor.png'), auto !important;
 }
 body{
@@ -41,7 +29,7 @@ body{
 	color: #3f8ffc;
 }
 .blufon{
-	font-family: Ace Records;	
+	font-family: 'East Sea Dokdo', cursive;	
 }
 #animate{
 	color: #0cebeb;
@@ -99,11 +87,11 @@ body{
 .banner header .logo{
 	color: #fff;
 	text-decoration: none;
-	font-size: 29px;
+	font-size: 40px;
 	font-weight: 300;
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 2px #000000;
-	font-family: Ace Records;
+	font-family: 'East Sea Dokdo', cursive;
 }
 /* navigation */
 .rlogo{
@@ -119,8 +107,8 @@ body{
 .banner header.sticky .rlogo{
 	left: 35px;
 	top: 0px;
-	height: 7.5%;
-	width: 4.4%;
+	height: 9.9%;
+	width: 4.5%;
 }
 .banner header.sticky{
 	padding: 5px 100px;
@@ -207,10 +195,10 @@ body{
 	left: 20%;
 	font-size: 50px;
 	letter-spacing: 3px;
-	text-shadow: 1px 1px 4px rgba(255, 255, 255, .7);
+	text-shadow: 3px 3px 4px rgba(0, 0, 0, .5);
 }
 .footfon{
-	font-family: Sweetly Broken;
+	font-family: 'Sacramento', cursive;
 }
 .heading{
 	color: white;
