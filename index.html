@@ -686,6 +686,26 @@
 		<p class="text" id="foott">Design & Developed by Aaryan Shaikh</p>
 		<p id="visited" style="display:none">0</p>
 	</section>
+	<div id="scratch">
+		<div class="content">
+			<p><span id="libAni" class="libUsed">1.&nbsp;p5JS</span>&nbsp;-&gt;&nbsp;a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!</p>
+			<p><span id="libAni" class="libUsed">2.&nbsp;tiltJS</span>&nbsp;-&gt;&nbsp;A smooth 3D tilt javascript library.</p>
+			<p><span id="libAni" class="libUsed">3.&nbsp;laxJS</span>&nbsp;-&gt;&nbsp;Simple & lightweight vanilla JavaScript library to create smooth & beautiful animations when you scroll.</p>
+			<p><span id="libAni" class="libUsed">4.&nbsp;mousetrapJS</span>&nbsp;-&gt;&nbsp;Simple library for handling keyboard shortcuts in Javascript.</p>
+			<p><span id="libAni" class="libUsed">5.&nbsp;SMTPJS</span>&nbsp;-&gt;&nbsp;Send email from Javascript.</p>
+			<p><span id="libAni" class="libUsed">6.&nbsp;particlesJS</span>&nbsp;-&gt;&nbsp;A lightweight JavaScript library for creating particles.</p>
+			<p><span id="libAni" class="libUsed">7.&nbsp;sweetalertJS</span>&nbsp;-&gt;&nbsp;A beautiful, responsive, customizable, accessable replacement for javascript's popup boxes.</p>
+			<p><span id="libAni" class="libUsed">8.&nbsp;animeJS</span>&nbsp;-&gt;&nbsp;JavaScript animation engine.</p>
+			<p><span id="libAni" class="libUsed">9.&nbsp;introJS</span>&nbsp;-&gt;&nbsp;a lightweight library for creating step-by-step customer onboarding.</p>
+			<p><span id="libAni" class="libUsed">10.&nbsp;JQuery</span>&nbsp;-&gt;&nbsp;a fast, small, and feature-rich JavaScript library.</p>
+			<p><span id="libAni" class="libUsed">11.&nbsp;skrollrJS</span>&nbsp;-&gt;&nbsp;Stand-alone parallax scrolling library for mobile (Android + iOS) and desktop.</p>
+			<p><span id="libAni" class="libUsed">12.&nbsp;typedJS</span>&nbsp;-&gt;&nbsp;A JavaScript Typing Animation Library.</p>
+			<p><span id="libAni" class="libUsed">13.&nbsp;threeJS</span>&nbsp;-&gt;&nbsp;a cross-browser JavaScript library and application programming interface used to create and display animated 3D computer graphics in a web browser using WebGL.</p>
+			<p><span id="libAni" class="libUsed">14.&nbsp;gsapJS</span>&nbsp;-&gt;&nbsp;Freakishly robust. HTML5 javascript animation built for professionals.</p>
+			<p><span id="libAni" class="libUsed">15.&nbsp;hoverEffectJS</span>&nbsp;-&gt;&nbsp;Javascript library to draw and animate images on hover.</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="p5.min.js"></script>
 	<script type="text/javascript" src="vanilla-tilt.js"></script>
 	<script src="lax.min.js"></script>
 	<script src="mousetrap.min.js"></script>
@@ -855,14 +875,35 @@ Mousetrap.bind('i l i k e t o c o d e', function() {
 Mousetrap.bind('f o l l o w m e u p', function() { 
 	window.open("https://www.instagram.com/its.me.cypher/");
  });
+var libCheck = false;		
 Mousetrap.bind('p o p t h e h o o d', function() { 
 	swal({
 		title: "Libraries!!",
-		text: "1. tiltJS -> A smooth 3D tilt javascript library.\n2. laxJS -> Simple & lightweight vanilla JavaScript library to create smooth & beautiful animations when you scroll.\n3. mousetrapJS -> Simple library for handling keyboard shortcuts in Javascript.\n4. SMTPJS -> Send email from Javascript.\n5. particlesJS -> A lightweight JavaScript library for creating particles.\n6. sweetalertJS -> A beautiful, responsive, customizable, accessable replacement for javascript's popup boxes.\n7. animeJS -> JavaScript animation engine.\n8. introJS -> Intro.js is a lightweight library for creating step-by-step customer onboarding.\n9. JQuery -> a fast, small, and feature-rich JavaScript library.\n10. skrollrJS -> Stand-alone parallax scrolling library for mobile (Android + iOS) and desktop.\n11. typedJS -> A JavaScript Typing Animation Library.\n12. threeJS -> a cross-browser JavaScript library and application programming interface used to create and display animated 3D computer graphics in a web browser using WebGL.\n13. gsapJS -> Freakishly robust. HTML5 javascript animation built for professionals.\n14. hoverEffectJS -> Javascript library to draw and animate images on hover.",
+		text: "Here's all the libraries I've used!...can't see? Try to scratch the screen using your mouse!!! And don't forget to press CTRL + L to close this!!",
 		icon: "warning"
 	});
+	document.getElementById('scratch').style.display = 'flex';
+	libCheck = true;
     return false;
  });
+Mousetrap.bind(['ctrl+l'], function() { 
+	document.getElementById('scratch').style.display = 'none';
+	libCheck = false;
+    return false;
+ });
+
+// scratch card
+function setup() {
+			let myCanvas = createCanvas(windowWidth, windowHeight);
+  			myCanvas.parent('scratch');
+		}
+function draw(){
+	strokeWeight(40);
+	smooth();
+	if (mouseIsPressed === true && libCheck === true) {
+		line(mouseX,mouseY,pmouseX,pmouseY)
+	}
+}
 		/*3d*/
 		Array.from(document.querySelectorAll('.imgbxth')).forEach((e) => {
 			const imgs = Array.from(e.querySelectorAll('img'));
@@ -1009,6 +1050,35 @@ window.onscroll = function(){
 
 	</script>
 	<!-- modules -->
+	<script type="module">
+import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
+const test = new Letterize({
+      targets: "#libAni"
+    });
+
+    var animation = anime.timeline({
+      targets: test.listAll,
+      delay: anime.stagger(100, {
+          grid: [test.list[0].length, test.list.length],
+          from: "center"
+        }),
+      loop: true,
+      easing: 'easeInOutBack'
+    });
+
+    animation
+      .add({
+        scale: 1
+      })
+      .add({
+        scale: 0,
+        rotate: 90
+      })
+      .add({
+        scale: 1,
+        rotate: 360,
+        padding: 0
+      });
 	<script type="module">
 import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
 const test = new Letterize({
