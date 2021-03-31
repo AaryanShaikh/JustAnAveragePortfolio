@@ -1319,3 +1319,32 @@ box-shadow:  2px 2px 14px #1e2c39,
              color: white;
              transition: 1s;
 }
+#scratch{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: #232526;
+	z-index: 9;
+}
+#scratch .content{
+	color: white;
+	margin: 50px;
+}
+#scratch .content p .libUsed{
+	font-size: 25px;
+	font-weight: 700;
+	color: #0099CC;
+}
+#defaultCanvas0{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	background: #fff;
+	mix-blend-mode: screen;
+}
