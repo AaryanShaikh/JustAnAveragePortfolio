@@ -1221,10 +1221,13 @@ body{
 /* water effect */
 .overview .wrapper2{
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .overview .wrapper2 h2{
 	position: absolute;
-	transform: translate(170%, -100%);
+	transform: translateY(-100%);
 	font-size: 4em;
 }
 .overview .wrapper2 h2:nth-child(1){
