@@ -1346,3 +1346,91 @@ box-shadow:  2px 2px 14px #1e2c39,
 	background: #fff;
 	mix-blend-mode: screen;
 }
+.cbl {
+    height: 70%;
+    width: 36%;
+    opacity: 1;
+    position: absolute;
+    top: -30%;
+    left: 9%;
+    transform: scale(0);
+}
+.cbl-txt {
+    position: absolute;
+    top: -22%;
+    border: 1px solid transparent;
+    width: 13vw;
+    left: 13%;
+    height: 16vh;
+    color: black !important;
+    font-family: 'Comic Neue', cursive;
+    font-size: 27px !important;
+    font-weight: 700;
+    transform: scale(0);
+}
+.cbr {
+    height: 70%;
+    width: 36%;
+    opacity: 1;
+    position: absolute;
+    top: -30%;
+    left: 57%;
+    transform: scale(0);
+}
+.cbr-txt {
+    position: absolute;
+    top: -22%;
+    border: 1px solid transparent;
+    width: 13vw;
+    left: 62%;
+    height: 16vh;
+    color: black !important;
+    font-family: 'Comic Neue', cursive;
+    font-size: 18px !important;
+    font-weight: 700;
+    transform: scale(0);
+}
+.cbl2 {
+    height: 70%;
+    width: 36%;
+    opacity: 1;
+    position: absolute;
+    top: -30%;
+    left: 9%;
+    transform: scale(0);
+}
+.cbl-txt2 {
+    position: absolute;
+    top: -22%;
+    border: 1px solid transparent;
+    width: 13vw;
+    left: 13%;
+    height: 16vh;
+    color: black !important;
+    font-family: 'Comic Neue', cursive;
+    font-size: 26px !important;
+    font-weight: 700;
+    transform: scale(0);
+}
+.cbr2 {
+    height: 70%;
+    width: 36%;
+    opacity: 1;
+    position: absolute;
+    top: -30%;
+    left: 57%;
+    transform: scale(0);
+}
+.cbr-txt2 {
+    position: absolute;
+    top: -22%;
+    border: 1px solid transparent;
+    width: 13vw;
+    left: 62%;
+    height: 16vh;
+    color: black !important;
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px !important;
+    font-weight: 700;
+    transform: scale(0);
+}
