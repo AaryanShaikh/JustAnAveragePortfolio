@@ -15,6 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
 <body oncontextmenu="return rclick()">
 	<!-- heading -->
@@ -249,6 +250,14 @@
 		 	<div id="himg"></div>
 		<div class="content" data-0-top="opacity:1;left:200px;" data-200-top="opacity:1;left:0px;">
 			<img src="social.png" id="myimg" class="lax lax_preset_blurInOut lax_preset_fadeInOut" data-tilt data-tilt-full-page-listening data-tilt-reset="false">
+			<img src="cbl.png" class="cbl">
+			<p class="cbl-txt">Have you tried the cheat codes yet? Press ctrl+k check it out!!</p>
+			<img src="cbr.png" class="cbr">
+			<p class="cbr-txt">Besides websites, I also make games. You can check out my games by going to my 'Projects' section or just typing the cheat 'iwannaplay'!!</p>
+			<img src="cbl.png" class="cbl2">
+			<p class="cbl-txt2">This chat concept is inspired by Wisdom Tree in Plants Vs Zombies!!</p>
+			<img src="cbr.png" class="cbr2">
+			<p class="cbr-txt2">I love playing games and making them. Also incorporating concepts of games in web projects!!</p>
 			<h2 id="typing"><span id="animate"></span></h2>
 		</div>
 		<!-- Progress Bar -->
@@ -1186,6 +1195,130 @@ window.onscroll = function(){
   var prog = (window.pageYOffset / totalht) * 100;
   progbar.style.height = prog + "%";
 }
+/* chat bubbles */
+var chatbub = anime.timeline({
+  easing: 'easeOutExpo',
+  loop: true
+});
+chatbub
+.add({
+	targets: '.cbr-txt2',
+	duration:1,
+	scale: 0
+})
+.add({
+	targets: '.cbr2',
+	duration:1,
+	scale: 0
+})
+.add({
+	targets: '.cbr-txt',
+	duration:1,
+	scale: 0
+})
+.add({
+	targets: '.cbr',
+	duration:1,
+	scale: 0
+})
+.add({
+	targets: '.cbl-txt2',
+	duration:1,
+	scale: 0
+})
+.add({
+	targets: '.cbl2',
+	duration:1,
+	scale: 0
+})
+.add({
+	targets: '.cbl',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbl-txt',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbl-txt',
+	duration:500,
+	delay:5000,
+	scale: 0
+})
+.add({
+	targets: '.cbl',
+	duration:500,
+	delay:0,
+	scale: 0
+})
+.add({
+	targets: '.cbr',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbr-txt',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbr-txt',
+	duration:500,
+	delay:5000,
+	scale: 0
+})
+.add({
+	targets: '.cbr',
+	duration:500,
+	delay:0,
+	scale: 0
+})
+.add({
+	targets: '.cbl2',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbl-txt2',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbl-txt2',
+	duration:500,
+	delay:5000,
+	scale: 0
+})
+.add({
+	targets: '.cbl2',
+	duration:500,
+	delay:0,
+	scale: 0
+})
+.add({
+	targets: '.cbr2',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbr-txt2',
+	duration:500,
+	scale: 1
+})
+.add({
+	targets: '.cbr-txt2',
+	duration:500,
+	delay:5000,
+	scale: 0
+})
+.add({
+	targets: '.cbr2',
+	duration:500,
+	delay:0,
+	scale: 0
+})		
 
 	</script>
 	<!-- modules -->
