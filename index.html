@@ -1000,7 +1000,7 @@ if (!isMobile) {
 Mousetrap.bind(['ctrl+k'], function(e) {
     swal({
 		title: "Cheats!!",
-		text: "1. goodbye -> closes the website\n2. iliketocode -> opens up my Github!\n3. followmeup -> opens up my Instagram\n4. popthehood -> List of all the libraries I've used in this website!",
+		text: "1. goodbye -> closes the website\n2. iliketocode -> opens up my Github!\n3. followmeup -> opens up my Instagram\n4. popthehood -> List of all the libraries I've used in this website!\n5. iwannaplay -> opens up my game you can download in itch.io(for other games you can click on my projects)",
 		icon: "warning"
 	});
     return false;
@@ -1023,6 +1023,9 @@ Mousetrap.bind('i l i k e t o c o d e', function() {
 Mousetrap.bind('f o l l o w m e u p', function() { 
 	window.open("https://www.instagram.com/its.me.cypher/");
  });
+Mousetrap.bind('i w a n n a p l a y', function() { 
+	window.open("https://0code.itch.io/the-unknown");
+ });		
 var libCheck = false;		
 Mousetrap.bind('p o p t h e h o o d', function() { 
 	swal({
