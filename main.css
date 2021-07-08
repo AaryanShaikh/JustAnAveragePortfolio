@@ -843,8 +843,9 @@ body{
 }
 /* tooltip */
 .tul{
-	top: 150px;
-	left: 630px;
+	position: relative;
+    top: 150px;
+    left: 50%;
 }
 .tul li {
 	position: relative;
@@ -1017,7 +1018,7 @@ body{
 	text-transform: uppercase;
 	margin-bottom: 5px;
 	font-size: 20px;
-	transform: translateY(200px);
+	transform: translateY(220px);
 	text-shadow: 1px 1px 4px #000;
 }
 .fcontainer .box:hover .content h2{
