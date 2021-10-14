@@ -101,15 +101,15 @@ $(window).on("load", function () {
     });
 });
 /* No Copy */
-// function rclick() {
-//     swal({
-//         title: "Oye Oye Oye!! No right-clicking and downloading stuff😂😂😂!!",
-//         buttons: {
-//             confirm: "Okay! Got it!"
-//         }
-//     });
-//     return false;
-// }
+function rclick() {
+    swal({
+        title: "Oye Oye Oye!! No right-clicking and downloading stuff😂😂😂!!",
+        buttons: {
+            confirm: "Okay! Got it!"
+        }
+    });
+    return false;
+}
 Mousetrap.bind(['ctrl+shift+i'], function (e) {
     swal({
         title: "Why copy my code when you can build something Bad-Ass of your own!!!",
